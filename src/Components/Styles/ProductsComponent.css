@@ -1,0 +1,33 @@
+.product{
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+  padding: 10px;
+  height: 10vh;
+  align-items: center;
+  border-bottom: 1px solid #d5d5d5;
+}
+.product-checkbox{
+  transform:scale(1.6);
+  opacity:0.9;
+  cursor:pointer;
+}
+.product-img-box{
+  width: 25%;
+  text-align: center;
+}
+.product-img{
+  width: 40px;
+  height: 40px;
+  margin: 0 5% ;
+  border-radius: 5px;
+}
+.product-name{
+  width: 40%;
+}
+.product-status{
+  width: 15%;
+}
+.product-price{
+  width: 25%;
+}

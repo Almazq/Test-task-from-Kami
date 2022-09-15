@@ -1,0 +1,22 @@
+.search-box{
+  margin-top: 2%;
+  width: 100%;
+}
+.input-search-box{
+  margin-top: 1%;
+  display: flex;
+  justify-content: center;
+}
+.input-search{
+  height: 4.5vh;
+  width: 85%;
+  font-size: 17px;
+}
+.similar-menu{
+  width: 90%;
+  margin-top: 1.5%;
+  margin-left: 5%;
+  display: flex;
+  border-bottom: 1px solid #d5d5d5;
+  padding: 10px;
+}
