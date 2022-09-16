@@ -1,11 +1,8 @@
-import React , { Component } from 'react'
+import React , { Component, useState } from 'react'
 import PropTypes from 'prop-types';
 import './Styles/CreateProduct.css';
-import Editor from 'ckeditor5-custom-build/build/ckeditor';
-// import {Editor as ClassicEditor} from 'ckeditor5-custom-build/build/ckeditor';
-import CKEditor from '@ckeditor/ckeditor5-react';
-import DecoupledEditor from '@ckeditor/ckeditor5-build-decoupled-document';
-
+import '../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+import Wysiwyg from './Wysiwyg'
 
 
 const CreateProduct = (props) => {
@@ -20,29 +17,8 @@ const CreateProduct = (props) => {
           <p>Name:</p><input type="text" name="name-product" />
           <p>Осписания:</p>
         </form>
-                <h2>CKEditor 5 using a custom build - decoupled editor</h2>
-                <CKEditor
-                    onReady={ editor => {
-                        console.log( 'Editor is ready to use!', editor );
-
-                        // Insert the toolbar before the editable area.
-                        editor.ui.getEditableElement().parentElement.insertBefore(
-                            editor.ui.view.toolbar.element,
-                            editor.ui.getEditableElement()
-                        );
-
-                        this.editor = editor;
-                    } }
-                    onError={ ( error, { willEditorRestart } ) => {
-
-                        if ( willEditorRestart ) {
-                            this.editor.ui.view.toolbar.element.remove();
-                        }
-                    } }
-                    onChange={ ( event, editor ) => console.log( { event, editor } ) }
-                    editor={ DecoupledEditor }
-                    data="<p>Hello from CKEditor 5's decoupled editor!</p>"
-                />
+        <div className="Wysiwyg"><Wysiwyg /></div>
+        <div className="status-create-profuct"></div>
       </div>
     </div>
   )
