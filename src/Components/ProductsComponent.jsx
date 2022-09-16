@@ -12,7 +12,6 @@ const ProductsComponent = (props) => {
         <p className="product-status" >ACTIVE</p>
         <p className="product-price" >800 tg/gramm</p>
       </div>
-      
     </div>
   )
 }
